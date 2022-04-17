@@ -166,7 +166,6 @@ class Game():
                     self.my_player.Hspeed = 5
                     self.my_player.facing = 3
                 #End if
-            #End if
                 #if the left arrow key is pressed, move left
                 elif event.key == pygame.K_LEFT and self.my_player.rect.x > 0:
                     self.my_player.Hspeed =-5
