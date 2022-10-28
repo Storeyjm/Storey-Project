@@ -72,11 +72,11 @@ map_2 =[[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
         [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
         [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
         [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
-        [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1],
-        [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1],
-        [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1],
-        [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1],
-        [1,0,0,0,0,0,0,0,0,0,0,5,5,0,0,0,5,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1],
+        [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1],
+        [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1],
+        [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1],
+        [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1],
+        [1,0,0,0,0,0,0,0,0,0,0,5,5,0,0,0,5,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1],
         [1,0,0,0,0,0,0,0,0,0,5,0,0,5,0,5,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
         [1,0,0,0,0,0,0,0,0,0,5,0,0,0,5,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
         [1,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
@@ -255,8 +255,8 @@ class Obstacle(pygame.sprite.Sprite):
 ### -- Game Class Loop
 class Game():
   ## -- GAME LOGIC
-    def __init__(self):
-        if my_game.game_run.level == 1:
+    def __init__(self,level):
+        if level == 1:
             current_map = map_1
         elif level == 2:
             current_map = map_2
@@ -266,6 +266,7 @@ class Game():
         self.myscore = 100
         self.mylives = 3
         self.mycoincounter = 0
+        self.level = level
         pygame.font.init()
         self.myfont = pygame.font.SysFont(None, 24)
         self.score_img = self.myfont.render(str(self.myscore), True, GREEN)
@@ -302,19 +303,19 @@ class Game():
         #Create the obstacles on screen
         for x in range (48):
             for y in range(64):
-                if map_1[x][y] == 1:
+                if current_map[x][y] == 1:
                     my_obstacle = Obstacle(GREY, 20, 20, y*20, x*20)
                     self.obstacle_group.add(my_obstacle)
                     self.all_sprites_group.add(my_obstacle)
-                elif map_1[x][y] ==2:
+                elif current_map[x][y] ==2:
                     my_obstacle = Obstacle(GREEN, 40, 40, y*20, x*20)
                     self.obstacle_group.add(my_obstacle)
                     self.all_sprites_group.add(my_obstacle)
-                elif map_1[x][y] ==3:
+                elif current_map[x][y] ==3:
                     my_obstacle = Obstacle(BROWN, 20, 60, y*20, x*20)
                     self.obstacle_group.add(my_obstacle)
                     self.all_sprites_group.add(my_obstacle)
-                elif map_1[x][y] ==5:
+                elif current_map[x][y] ==5:
                     my_coin = Obstacle(GOLD, 20, 20, y*20, x*20)
                     self.coin_group.add(my_coin)
                     self.all_sprites_group.add(my_coin)
@@ -332,7 +333,7 @@ class Game():
         for event in pygame.event.get():
             # close the game
             if event.type == pygame.QUIT:
-                return True
+                self.level = 4
             #End if
             if event.type == pygame.KEYDOWN:
                 #if the right arrow key is pressed, move right
@@ -431,6 +432,8 @@ class Game():
             self.count = 0
             self.lives_img = self.myfont.render(str(self.mylives), True, RED)
         self.count = self.count + 1
+        if self.myscore < 90:
+            self.level = self.level + 1
         
         # -- Flip display to reveal new position of objects 
         pygame.display.flip()
@@ -438,16 +441,26 @@ class Game():
         # - The clock ticks over
         clock.tick(self.clock_speed)
 
+        return self.level
+
     # end of game run function
 #End Class
 
 # Create new game object
-my_game = Game()
-level = 2
+
+curr_level = 1
+my_game = Game(curr_level)
 #Game loop
 while not done:
     # Run the game
-    done = my_game.game_run()
+    level = my_game.game_run()
+    if level > curr_level:
+        if level > 2:
+            done = True
+        else:
+            my_game = Game(level)
+            curr_level = level
+        #end if
     #end if
 #Endwhile - End of game loop
 
