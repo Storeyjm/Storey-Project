@@ -182,9 +182,10 @@ class Player(pygame.sprite.Sprite):
 # - Define class Enemy - Which is a sprite
 class Enemy(pygame.sprite.Sprite):
     #Define constructor for Enemy
-    def __init__(self, color, width, height, speed, x_pos, y_pos):
+    def __init__(self, color, width, height, speed, x_pos, y_pos, facing_pos):
         #Set speed of the sprite
-        self.speed = speed
+        self.start_y = y_pos
+        self.start_x = x_pos
         #Call the sprite constructor
         super().__init__()
         #self.image = pygame.image.load("Img/Enemy.png").convert
@@ -192,18 +193,46 @@ class Enemy(pygame.sprite.Sprite):
         #Create a sprite and fill it with colour
         self.image = pygame.Surface([width, height])
         self.image.fill(color)
+        self.facing = facing_pos
         #Set the position of the Sprite
         self.rect = self.image.get_rect()
         self.rect.y = y_pos
         self.rect.x = x_pos
-
+        self.x_dist = 150
+        self.y_dist = 100
+        self.speed = speed
     #End Procedure
 
     def update(self):
-        if self.rect.y >= 0 and self.rect.y < screenHeight:
-            self.rect.y = self.rect.y
-        else:
-            self.rect.y = 0
+        if self.facing == 0 or 1:
+            if self.rect.y >= self.start_y and self.rect.y < self.start_y + self.y_dist:
+                self.rect.y = self.rect.y + self.speed
+            else:
+                if self.facing == 1:
+                    self.speed = random.randrange(2,5) * -1
+                    self.facing = 0
+                    self.rect.y = self.rect.y + self.speed
+                elif self.facing == 0:
+                    self.facing = 1
+                    self.speed = random.randrange(2,5)
+                    self.y_dist = random.randrange(100,150)
+                    self.rect.y = self.rect.y + self.speed
+                #endif
+        elif self.facing == 2 or 3:
+            if self.rect.x >= self.start_x and self.rect.x < self.start_x + self.x_dist:
+                self.rect.x = self.rect.x + self.speed
+            else:
+                if self.facing == 2:
+                    self.facing = 3
+                    self.speed = random.randrange(2,5) * -1
+                    self.rect.x = self.rect.x + self.speed
+                elif self.facing == 3:
+                    self.facing = 2
+                    self.speed = random.randrange(2,5)
+                    self.x_dist = random.randrange(150,200)
+                    self.rect.x = self.rect.x + self.speed
+                #endif
+            #endif
         #endif
     #End Procedure
 #End Class
@@ -258,8 +287,10 @@ class Game():
     def __init__(self,level):
         if level == 1:
             current_map = map_1
+            enemy_range = 5
         elif level == 2:
             current_map = map_2
+            enemy_range = 5
         #end if
 
         # Create the counter and score and reset the coin counter for the start of the game
@@ -288,11 +319,11 @@ class Game():
         self.all_sprites_group.add (self.my_player)
 
         # Create enemies
-        # List of enemy starting positions
-        enemy_positions =[[530,50],[230,20],[420,148]]
+        # List of enemy starting positions and facing directions
+        enemy_positions =[[580,80,1],[460,20,1],[420,160,1],[840,420,1],[80,360,3]]
         self.enemy_group = pygame.sprite.Group()
-        for pos in range (3):
-            my_enemy = Enemy(RED,20,20,0,enemy_positions[pos][0], enemy_positions[pos][1])
+        for pos in range (enemy_range):
+            my_enemy = Enemy(RED,20,20,3,enemy_positions[pos][0], enemy_positions[pos][1], enemy_positions[pos][2])
             self.enemy_group.add(my_enemy)
             self.all_sprites_group.add(my_enemy)
         #Next pos
@@ -432,8 +463,8 @@ class Game():
             self.count = 0
             self.lives_img = self.myfont.render(str(self.mylives), True, RED)
         self.count = self.count + 1
-        if self.myscore < 90:
-            self.level = self.level + 1
+        #if self.myscore < 90:
+            #self.level = self.level + 1
         
         # -- Flip display to reveal new position of objects 
         pygame.display.flip()
