@@ -15,9 +15,11 @@ RED =   (255,  0,  0)
 GREY =  (163,163,163)
 GREEN = (151,244,139)
 BROWN = (165, 42, 42)
+L_BROWN=(160, 40, 40)
 GOLD =  (255,215,  0)
 BLUE =  (100,220,255)
 ORANGE =(255,173, 26)
+PINK =  (255,160,160)
 
 map_1 =[[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
         [1,0,0,0,0,0,4,4,4,4,4,4,4,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
@@ -129,9 +131,7 @@ screen = pygame.display.set_mode(size)
 
 #-- Title of new window/screen
 pygame.display.set_caption("Arrow Quest")
-
-boulder_icon = pygame.image.load("Img\\Boulder.png").convert()
-tree_icon = pygame.image.load("Img\\Tree.png").convert()
+background_img = pygame.image.load("Background.jpg").convert()
 
 # -- Exit game flag set to false
 done = False
@@ -401,13 +401,40 @@ class Obstacle(pygame.sprite.Sprite):
         #boulder_icon.set_colorkey((255, 255, 255), pygame.RLEACCEL)
         #tree_icon.set_colorkey((255, 255, 255), pygame.RLEACCEL)
         #Create a sprite and fill it with color
-        self.image = pygame.Surface([width, height])
-        #self.image.blit(image, (0,0))
-        self.image.fill(color)
-        self.rect = self.image.get_rect()
+       
+        if color==GREY:
+            self.image = pygame.image.load("Boulder.jpg").convert()
+            self.rect = self.image.get_rect()
+            self.image.set_colorkey(BLACK)
+        elif color == GOLD:
+            self.image = pygame.image.load("5_coin.jpg").convert()
+            self.rect = self.image.get_rect()
+        elif color == ORANGE:
+            self.image = pygame.image.load("10_coin.jpg").convert()
+            self.rect = self.image.get_rect()
+        elif color == L_BROWN:
+            self.image = pygame.image.load("Bridge.jpg").convert()
+            self.rect = self.image.get_rect()
+        elif color == BROWN:
+            self.image = pygame.image.load("Tree.jpg").convert()
+            self.rect = self.image.get_rect()
+            self.image.set_colorkey(BLACK)
+        elif color == PINK:
+            self.image = pygame.image.load("Goal.jpg").convert()
+            self.rect = self.image.get_rect()
+        elif color == GREEN:
+            self.image = pygame.image.load("Bush.jpg").convert()
+            self.rect = self.image.get_rect()
+            self.image.set_colorkey(BLACK)
+        else:
+            self.image = pygame.Surface([width, height])
+            self.rect = self.image.get_rect()
+            self.image.fill(color)
+        #End if
+
         #Set the positions of the attributes
-        self.rect.x = x_ref
         self.rect.y = y_ref
+        self.rect.x = x_ref
     #End Procedure
 #End Class
 
@@ -468,7 +495,7 @@ class Game():
                     self.obstacle_group.add(my_obstacle)
                     self.all_sprites_group.add(my_obstacle)
                 elif current_map[x][y] ==4:
-                    my_goal = Obstacle(BLUE, 20, 20, y*20, x*20)
+                    my_goal = Obstacle(PINK, 20, 20, y*20, x*20)
                     self.goal_group.add(my_goal)
                     self.all_sprites_group.add(my_goal)
                 elif current_map[x][y] ==5:
@@ -480,7 +507,7 @@ class Game():
                     self.obstacle_group.add(my_obstacle)
                     self.all_sprites_group.add(my_obstacle)
                 elif current_map[x][y] ==7:
-                    my_bridge = Obstacle(BROWN, 20, 20, y*20, x*20)
+                    my_bridge = Obstacle(L_BROWN, 20, 20, y*20, x*20)
                     self.bridge_group.add(my_bridge)
                     self.all_sprites_group.add(my_bridge)
                 elif current_map[x][y] ==8:
@@ -621,6 +648,7 @@ class Game():
 
         # -- Screen background is BLACK
         screen.fill (BLACK)
+        screen.blit(background_img,[0,0])
 
         # -- Draw here
         self.all_sprites_group.draw (screen)
